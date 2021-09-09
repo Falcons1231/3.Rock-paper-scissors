@@ -5,3 +5,11 @@
 #game-screen {
   border: 1px solid red;
 }
+
+.hidden{
+  display: none;
+}
+
+.button.start-game{
+  
+}
