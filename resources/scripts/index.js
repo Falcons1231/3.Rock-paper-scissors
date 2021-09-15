@@ -16,19 +16,21 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-  scoreParagraph.innerHTML = game.userName + ": " + game.user.score + " v CPU: " + game.cpu.score;
+  scoreParagraph.innerHTML = game.username + ": " + game.score.user + " v CPU: " + game.score.cpu;
 }
 
 // updateGameHistoryUI
-function updateGameHistoryUI(){
-  gameHistoryParagraph.innerHTML = game.gameHistoryLog;
+function updateGameHistoryUI(){ 
+  gameHistoryParagraph.innerHTML += game.gameHistoryLog[game.gameHistoryLog.length - 1];
+  gameHistoryParagraph.innerHTML += "<br>";
+
 }
 
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function (startButtonClickEvent) {
   startButtonClickEvent.preventDefault();
   const username = userName;
-  game = new RockPaperScissors(userName);
+  game = new RockPaperScissors(userName.value);
   welcomeScreen.classList.add('d-none');
   gameScreen.classList.remove('d-none');
     // Complete
@@ -39,7 +41,7 @@ goButton.addEventListener(`click`, function (goButtonClickEvent) {
   goButtonClickEvent.preventDefault();
   game.play(userSelection);
   updateScoreTallyUI();
-  gameHistoryParagraph();
+  updateGameHistoryUI();  
 
 });
 

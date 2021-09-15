@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Type your title here</title>
+    <title>Rock Paper Scissors</title>
     <!-- Bootstrap Styles-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="resources/styles/bootstrap.min.css">
@@ -14,34 +14,38 @@
 <body>    
     <div class="container">        
         <!-- WORK FROM INSIDE THIS CONTAINER-->
-        <h1>Welcome to Rock, Paper, Scissors!</h1>
+        <h1>Rock Paper Scissors</h1>
         <div id="welcome-screen">
             <form id="name-form">
-                <label for="username">
-                    Your Name
+                <div class="form-group">
+                    <label for="username">
+                        Your Name                        
+                    </label> 
                     <input type="text" placeholder="Enter Name Here..." id="username" name="username" class="form-control">
-                </label> 
+                </div>
             </br>
-                <button id="start-game-button" class="btn btn-primary"> Start Game</button>
+                <button id="start-game-button" class="btn btn-primary">Start Game!</button>
             </form>
         </div>
         <div id="game-screen" class="form-group">
             <div id="score-tally">
-                <p id="score">User: 0 v CPU: 0</p>
-                <form id="game-form">
-                    <div>
-                        <label for="user-selection">Select your choice</label>
-                        <select id="user-selection" name="user-selection" class="custom-select">
-                            <option>Rock</option>
-                            <option>Paper</option>
-                            <option>Scissors</option>
-                        </select>
-                        <button id="go-button" class="btn btn-success">Go!</button>
-                        <p>game-history</p>
-                    </div>
-                </form>
+                <p id="score">User: 0 v CPU: 0</p>                
             </div>
+            <form id="game-form">
+                <div class="form-group">
+                    <label for="user-selection">Select your choice</label>
+                    <select id="user-selection" name="user-selection" class="custom-select">
+                        <option>Rock</option>
+                        <option>Paper</option>
+                        <option>Scissors</option>
+                    </select>                    
+
+                </div>
+                <button id="go-button" class="btn btn-success">Go!</button>
+            </form>
+            <p id="game-history">game-history<br></p>
         </div>
+
     </div>
 
     <!-- Our own Scripts -->
